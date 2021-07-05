@@ -18,28 +18,30 @@ connected to the sensing area. This way, any force on the nib can be detected.
 <img src="https://th.bing.com/th/id/R.97912d2f3beab99308be862534169ba3?rik=UaUsupiXlO9Q9g&riu=http%3a%2f%2ftinkersphere.com%2f2265-thickbox_default%2ffsr-force-sensor-pressure-sensor-arduino-compatible.jpg&ehk=RpCjVQNBs1ibsMZ3%2fOfz3gA98VU5LGQWO76kC2O%2fo8g%3d&risl=&pid=ImgRaw" width=30% height=30%>      
 This sensor is available in the market. The cost might not be very less compared to a few other components, but it is pretty cheap compared to pressure sensors discussed above and
 also solves the purpose.       
-Here is a simple example showing the working of the force sensor:    
-#### Circuitry     
-<img src="https://github.com/Narasimhan07/EC04_Task2/blob/af97291d442b3f0db37edc620a0cda19bcb83d86/simple%20force%20sensor.png" width=100% height=100%>                   
-#### code             
-```
-int inputpin=A0;
-int pressure_analog;
-int no_pressure=400;
-void setup()
-{
-  pinMode(A0,INPUT);
-  Serial.begin(9600);
-}
+Here is a simple example showing the working of the force sensor:        
+#### Circuitry and code          
+<img src="https://github.com/Narasimhan07/EC04_Task2/blob/af97291d442b3f0db37edc620a0cda19bcb83d86/simple%20force%20sensor.png" width=100% height=100%>                                      
 
-void loop()
-{
-  pressure_analog=analogRead(inputpin);
-  Serial.println(pressure_analog);
-  if(pressure_analog>400)
-  {
-    Serial.println("significant force bro");
-  }
-  delay(500);
-}
-```
+Below is the code for the above diagram.   
+
+```    
+  
+ int inputpin=A0;
+ int pressure_analog;
+ int no_pressure=400;
+ void setup()
+ {
+   pinMode(A0,INPUT);
+   Serial.begin(9600);
+ }
+
+ void loop()
+ {
+   pressure_analog=analogRead(inputpin);
+   Serial.println(pressure_analog);
+   if(pressure_analog>400)
+   {
+     Serial.println("significant force bro");
+   }
+   delay(500);
+ }
