@@ -28,7 +28,7 @@ Below is the code for the above diagram.
   
  int inputpin=A0;
  int pressure_analog;
- int no_pressure=400;
+ int pressure_limit=400;
  void setup()
  {
    pinMode(A0,INPUT);
@@ -39,7 +39,7 @@ Below is the code for the above diagram.
  {
    pressure_analog=analogRead(inputpin);
    Serial.println(pressure_analog);
-   if(pressure_analog>400)
+   if(pressure_analog>pressure_limit)
    {
      Serial.println("significant force bro");
    }
