@@ -20,7 +20,7 @@ This sensor is available in the market. The cost might not be very less compared
 also solves the purpose.       
 Here is a simple example showing the working of the force sensor:    
 #### Circuitry     
-![sensor](simple force sensor.png)     
+![image](simple force sensor.png)          
 #### code    
 ```
 int inputpin=A0;
